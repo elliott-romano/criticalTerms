@@ -21,3 +21,24 @@
   }
   // Start the animation
   requestAnimationFrame(updateGradient);
+
+ 
+
+  // A major pentatonic scale
+  const aMajorPentatonicScale = ["A4", "B4", "C#5", "E5", "F#5"];
+  
+  // Function to play a random note from the A major pentatonic scale with reverb
+  function playRandomNoteWithReverb() {
+    const randomIndex = Math.floor(Math.random() * aMajorPentatonicScale.length);
+    const randomNote = aMajorPentatonicScale[randomIndex];
+    
+    // Create a synth with reverb
+    const synth = new Tone.Synth().connect(new Tone.Freeverb().toDestination());
+    synth.triggerAttackRelease(randomNote, "8n");
+  }
+  
+  // Add hover event listeners to all <p> elements
+  const paragraphs = document.querySelectorAll("p");
+  paragraphs.forEach(paragraph => {
+    paragraph.addEventListener("mouseenter", playRandomNoteWithReverb);
+  });

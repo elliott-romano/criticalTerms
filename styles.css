@@ -1,10 +1,105 @@
-body {
-    background-color: #ff0000;
-    font-family: Arial, sans-serif;
+@font-face {
+    font-family: 'RomMono'; /* You can choose any name for your font */
+    src: url('fonts/ABCROMMono-Regular-Trial.otf') format('opentype'),
+         url('fonts/ABCROMMono-RegularItalic-Trial.otf') format('opentype'),
+         url('fonts/ABCROMMono-Medium-Trial.otf') format('opentype');
+
+    /* Add additional lines for other font formats if needed */
+}
+
+  html, body {
+    font-family: 'RomMono', sans-serif;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+  }
+
+  body {
+    background-image: conic-gradient(from 0deg at 50% 50%, hsl(0, 100%, 50%), hsl(193, 100%, 50%), hsl(135, 100%, 50%));
+  }
+
+h1 {
+    font-size: 64px;
+}
+
+.container {
+     /* display: flex;
+    justify-content: flex-start;
+    align-items: flex-start; */
+    /* height: 100%; */
+    width: 700px;
+    margin: 50 auto;
+}
+
+.terms {
+    /* background-color: rgba(127, 255, 212, 0.287); */
+}
+
+.terms p {
+    margin-top: 8px;
+}
+
+.term{
+    margin-top: 42px;
+
 }
 
 
-.container {
-    width: 500px;
-    margin: 0 auto;
+p {
+    font-size: 18px;
+    /* font-family: sans-serif; */
+    line-height: 1.5;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease-in; /* adjust duration and easing function as needed */
+}
+
+.bold {
+    font-style: bold;
+    font-weight: 900;
+}
+
+.italic {
+    font-style: italic;
+}
+
+
+header {
+    margin-bottom: 100px;
+}
+
+.questions {
+    margin-top: 100px;
+}
+
+.question{
+    margin-top: 42px;
+}
+
+
+h3 {
+    font-size: 32px;
+    font-weight: 400;
+    margin: 0;
+    padding: 0;
+    transition: color 0.3s ease-in; /* adjust duration and easing function as needed */
+}
+
+p:hover {
+    color: rgb(255, 255, 255);
+}
+
+h3:hover {
+    color: rgb(255, 255, 255);
+}
+
+footer{
+    margin-top: 100px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    background-color: black;
 }
